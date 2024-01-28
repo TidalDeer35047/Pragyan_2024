@@ -9,7 +9,6 @@ This web application provides real-time and predicted air quality information fo
   - [Installation](#installation)
 - [Usage](#usage)
 - [File Structure](#file-structure)
-- [License](#license)
 
 ## Getting Started
 
