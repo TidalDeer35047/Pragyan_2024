@@ -1,1 +1,1 @@
-pandas, numpy, statsmodels, sklearn, keras, matplotlib, pmdarima, tranformers, torch, huggingface_hub, 
+pandas, numpy, statsmodels, sklearn, keras, matplotlib, pmdarima, tranformers, torch, huggingface_hub, accelerate, flask
