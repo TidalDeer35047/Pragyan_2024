@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>Team Clueless | About This</title>
+  <!-- Favicons -->
+  <link href={{ url_for('static',filename='img/favicon.png')}} rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href={{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}} rel="stylesheet" type="text/css">
+  <link href={{ url_for('static',filename='vendor/bootstrap-icons/bootstrap-icons.css')}} rel="stylesheet" type="text/css">
+  <link href={{ url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}} rel="stylesheet" type="text/css">
+  <link href={{ url_for('static',filename='vendor/remixicon/remixicon.css')}} rel="stylesheet" type="text/css">
+
+  <!-- Template Main CSS File -->
+  
+  <link type="text/css" rel="stylesheet" href={{ url_for('static',filename='css/style.css')}} >
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <!--Start Logo-->
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center">
+        <img src={{ url_for('static',filename='img/logo.png')}} alt="">
+      </a>
+    </div>
+    <!-- End Logo -->
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <!-- Start Dashboard Nav-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('home')}}">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <!-- End Dashboard Nav -->
+
+      <!-- Start About This Page Nav-->
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('about_this')}}">
+          <i class="bi bi-question-circle"></i>
+          <span>About This</span>
+        </a>
+      </li>
+      <!-- End About This Page Nav -->
+    
+      <!-- Start AQI Nav-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#aqi-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>AQI</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="aqi-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{url_for('aqi_graph')}}">
+              <i class="bi bi-circle"></i><span>Graphs</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+       <!-- End AQI Nav -->
+
+      <!-- Start About Us Page Nav-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('about_us')}}">
+          <i class="bi bi-people-fill"></i>
+          <span>About Us</span>
+        </a>
+      </li>
+      <!-- End About Us Page Nav -->
+    </ul>
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>About Our Project</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{url_for('home')}}">Home</a></li>
+          <li class="breadcrumb-item active">About This</li>
+        </ol>
+      </nav>
+    </div>
+    <!-- End Page Title -->
+
+  
+
+            <!-- Default Card -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">What Is AQI ?</h5>
+        AQI (Air Quality Index) is a measure of the quality of air in a specific location. The AQI values ranges from 0-500, with higher values indicating poorer air quality.  It is calculated based on the levels of airborne pollutants present in the atmosphere such as SO<sub>2</sub>, CO<sub>2</sub>, CO, NO<sub>2</sub>, ozone.
+
+<br><br>
+Pollution, whether from vehicle emissions, industrial activities, or natural sources like wildfires, significantly impacts air quality and human health. AQI provides a standardized way to assess pollution levels, helping authorities and individuals make informed decisions to mitigate exposure. Regular monitoring of AQI allows for timely interventions such as issuing air quality alerts, implementing emission controls, and promoting public awareness about reducing activities that contribute to pollution. Ultimately, efforts to reduce pollution not only improve air quality but also safeguard ecosystems and promote sustainable living for future generations.
+      </div>
+    </div><!-- End Default Card -->
+  
+
+            <!-- Default Card -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Some Of The Assumptions We Have Made Are:</h5>
+                <ul class="about-this">
+                  <li>We will be ignoring the effects of aerosols as the available data is very little.</li>
+                  <li>
+                    We assume the data acquired during the period of the COVID pandemic to be an outlier, as it was an unanticipated global event and caused unpredictable patterns of pollution and energy consumption.
+                  </li>
+                  <li>
+                    We assume that the model is capable of accommodating increasing data volumes and user interactions.
+                  </li>
+                  <li>
+                    Access to real-time air quality data is essential for accurate predictions.
+                  </li>
+                  <li>
+                    We assume the solution will be cost effective to ensure sustainability.
+
+                  </li>
+                </ul>
+                
+              </div>
+            </div><!-- End Default Card -->
+
+            
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      Team Clueless | Virtusa | Pragyan Hackathon
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+
+  <!-- Vendor JS Files -->
+  <script src={{ url_for('static',filename='vendor/apexcharts/apexcharts.min.js')}} ></script>
+  <script src={{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}} ></script>
+  <script src={{ url_for('static',filename='vendor/chart.js/chart.umd.js')}} ></script>
+  <script src={{ url_for('static',filename='vendor/echarts/echarts.min.js')}} ></script>>
+
+  <!-- Template Main JS File -->
+  <script src={{ url_for('static',filename='js/main.js')}} ></script>
+
+</body>
+
+</html>
