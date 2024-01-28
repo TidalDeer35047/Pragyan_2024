@@ -50,6 +50,12 @@ The main.sh script is responsible for starting all the necessary programs and sc
 
 ### File Structure
 
+THE GitHub contains all the files for the project arranged in the following folder struture.
+
+- Predictor: This folder contains the scripts used for training and testing the model.
+- Real Time and Future : These folders contain the CSV files with the real time AQI data obtained from AQICN and Delhi Pollution Control Board
+- Templates: This folder contains all the HTML templates responsible for dirivng the front end of our application running on the Flask Framework
+- App.py: This script launches the flask application along with initializing the APIs and other dependencies. 
 
 ### Implementation
 - SARIMAX-LSTM hybrid Time Series Model
