@@ -28,7 +28,7 @@ Make sure you have the necessary prerequisites installed on your machine:
 ```bash
 git clone https://github.com/yourusername/air-quality-prediction.git
 ```
-2. Install the required libraries and modules used.
+2. Install the required libraries and modules used. Unzip the static zip file for third party CSS/JavaScript libraries. 
 
 ```bash
   pip install -r requirements.txt
